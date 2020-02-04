@@ -80,7 +80,7 @@ body {
     padding-left: 1rem;
     overflow-y: auto;
     visibility: hidden;
-    background-color: #4b779e;
+    background-color: #fff;
     transition-timing-function: ease-in-out;
     transition-duration: .3s;
     transition-property: left, visibility;
@@ -176,7 +176,7 @@ body {
 .hamburger-inner::after {
   width: 35px;
   height: 3px;
-  background-color: #fff;
+  background-color: #007844;
   border-radius: 3px;
   position: absolute;
   transition-property: transform;
@@ -814,6 +814,20 @@ button:focus {
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-services .container-grid {
+    grid-template-columns: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-services .container-grid {
+    padding: 0;
+    gap: 10px;
+  }
+}
+
 .main-services .main-services__bg {
   position: absolute;
   z-index: -1;
@@ -853,6 +867,12 @@ button:focus {
   color: #fff;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-general__description {
+    width: 100%;
+  }
+}
+
 .main-general__description--dark {
   color: #4a4a4a;
   font-weight: 500;
@@ -874,13 +894,13 @@ button:focus {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar {
-    background-color: #4b779e;
+    background-color: #fff;
   }
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
   .navbar {
-    background-color: #4b779e;
+    background-color: #fff;
   }
 }
 
@@ -942,6 +962,9 @@ button:focus {
 @media (min-width: 0px) and (max-width: 767px) {
   .nav-item a {
     font-size: 1.3rem;
+    color: #007844;
+    text-shadow: none;
+    font-weight: 600;
   }
 }
 
@@ -1181,12 +1204,25 @@ button:focus {
   width: 50%;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-banner .main-banner__text .main-banner__title {
+    width: 100%;
+  }
+}
+
 .main-banner .main-banner__text .main-banner__title p {
   font-size: 41px;
   font-weight: 600;
   color: #fff;
   font-family: "Montserrat", sans-serif;
   margin: 1rem 0;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-banner .main-banner__text .main-banner__title p {
+    font-size: 31px;
+    line-height: 1;
+  }
 }
 
 .main-banner .main-banner__text .main-banner__subtitle {
@@ -1238,16 +1274,6 @@ button:focus {
   object-fit: cover;
 }
 
-.main-whatsapp {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-}
-
-.main-whatsapp img {
-  width: 4rem;
-}
-
 .main-about {
   background: #c6e897;
   position: relative;
@@ -1257,6 +1283,14 @@ button:focus {
   grid-template-columns: repeat(2, 1fr);
   width: 50%;
   gap: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-about .container-grid {
+    width: 100%;
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
 }
 
 .main-about .main-general__title {
@@ -1275,6 +1309,12 @@ button:focus {
   margin-bottom: 3rem;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-about .main-general__description {
+    width: 100%;
+  }
+}
+
 .main-about .main-about__img {
   position: absolute;
   width: 40%;
@@ -1282,10 +1322,18 @@ button:focus {
   height: 100%;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-about .main-about__img {
+    display: none;
+  }
+}
+
 .main-about .main-about__item {
   border-radius: 2px;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
   padding: .5rem;
 }
 
@@ -1305,6 +1353,19 @@ button:focus {
   margin-top: 3rem;
   padding: 0 4rem;
   grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-video .container-grid {
+    grid-template-columns: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-video .container-grid {
+    padding: 0;
+  }
 }
 
 .main-video .main-general__description {
@@ -1433,9 +1494,27 @@ button:focus {
   gap: 3rem;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-contact .container-grid {
+    grid-template-columns: 100%;
+  }
+}
+
 .main-contact .main-contact__img img {
   width: 100%;
   height: 33rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-contact .main-contact__img img {
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-contact .main-contact__img img {
+    object-fit: contain;
+  }
 }
 
 .main-contact .main-contact__form {
@@ -1484,6 +1563,12 @@ button:focus {
   grid-template-columns: repeat(5, 1fr);
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-metrics .container-grid {
+    grid-template-columns: 100%;
+  }
+}
+
 .main-metrics .main-metrics__item {
   display: flex;
   flex-direction: column;
@@ -1521,6 +1606,13 @@ button:focus {
   gap: 6rem;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-footer .container-grid {
+    grid-template-columns: 100%;
+    gap: 2rem;
+  }
+}
+
 .main-footer .main-footer__logo img {
   width: 7rem;
   margin-bottom: 3rem;
@@ -1551,6 +1643,12 @@ button:focus {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .main-footer .site-map {
+    padding: 0 2rem;
+  }
 }
 
 .main-footer .site-map li {
@@ -1606,10 +1704,21 @@ button:focus {
 }
 
 .main-powered {
+  position: relative;
   background: #f8fae4;
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
+}
+
+.main-powered .slider-top {
+  position: absolute;
+  margin: 0;
+  right: 0;
+}
+
+.main-powered .slider-top img {
+  width: 3rem;
 }
 
 .main-powered .container {
@@ -1632,4 +1741,14 @@ button:focus {
 .main-powered a:hover {
   color: #1c3348;
   transition: .5s;
+}
+
+.main-whatsapp {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.main-whatsapp img {
+  width: 4.5rem;
 }
