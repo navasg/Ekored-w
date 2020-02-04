@@ -35,18 +35,18 @@ $('.main-banner__content').slick({
   ]
 });
 
-$('.main-experience__carousel').slick({
-  slidesToShow: 1,
+$('.main-gallery__caroel').slick({
+  slidesToShow: 4,
   speed: 500,
   fade: true,
-  cssEase: 'linear',
+  // cssEase: 'linear',
   slidesToScroll: 1,
   dots: false,
   arrows: true,
   responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
@@ -71,10 +71,11 @@ $('.main-experience__carousel').slick({
   ]
 });
 
-$('.main-clients__carousel').slick({
+$('.main-gallery__carousel').slick({
   infinite: true,
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
+
   dots: false,
   arrows: true,
   responsive: [{
@@ -83,7 +84,7 @@ $('.main-clients__carousel').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true,
+        arrows: true,
       }
     },
     {
