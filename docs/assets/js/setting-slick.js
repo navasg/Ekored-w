@@ -108,6 +108,43 @@ $('.main-gallery__carousel').slick({
 });
 
 
+$('.about-team__carousel').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: false,
+  arrows: true,
+  responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: true,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        // autoplay: true,
+        autoplaySpeed: 1000,
+      }
+    }
+  ]
+});
+
+
+
 $('.main-models__carousel').slick({
   infinite: true,
   slidesToShow: 3,
