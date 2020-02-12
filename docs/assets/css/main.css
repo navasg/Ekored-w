@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -1007,6 +1009,10 @@ button:focus {
   color: #fff !important;
 }
 
+.nav-item .main-general__button {
+  color: #fff !important;
+}
+
 .nav-item {
   display: flex;
   align-items: center;
@@ -1020,7 +1026,6 @@ button:focus {
 }
 
 .nav-item a {
-  height: 100%;
   justify-content: center;
   display: flex;
   color: #fff;
@@ -1102,7 +1107,7 @@ button:focus {
 }
 
 .fixed {
-  background: #1c3348;
+  background: #1c3348 !important;
 }
 
 .nav-link {
@@ -1142,6 +1147,14 @@ button:focus {
   .nav-link:hover {
     color: #fff;
   }
+}
+
+.fixed--link {
+  color: #4a4a4a !important;
+}
+
+.fixed--white {
+  background: #fff;
 }
 
 .navbar-brand {
@@ -2246,4 +2259,17 @@ button:focus {
   z-index: 1;
   height: 7rem;
   object-fit: cover;
+}
+
+/*botón up*/
+.boton-subir {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 14px;
+  z-index: 999999999;
+}
+
+.slider-top img {
+  width: 3rem;
 }
