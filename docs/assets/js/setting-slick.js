@@ -209,8 +209,9 @@ $('.publications-notice__carousel').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
+        arrows: false,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
       }
     }
   ]
