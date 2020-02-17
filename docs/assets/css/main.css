@@ -2717,3 +2717,133 @@ button:focus {
 .publications-notice .main-general__description {
   color: #4a4a4a;
 }
+
+.publications-notice .publications-notice__carousel {
+  padding: 0 5rem;
+  margin-top: 3rem;
+}
+
+.publications-notice .slick-prev,
+.publications-notice .slick-next {
+  z-index: 1;
+  background: #347845;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.publications-notice .slick-prev::before,
+  .publications-notice .slick-next::before {
+  height: 100%;
+  position: absolute;
+  top: 13px;
+  right: -10px;
+    /* display: flex; */
+  background-repeat: no-repeat;
+  content: "" !important;
+  opacity: 1;
+  width: 100%;
+}
+
+.publications-notice .slick-prev {
+  left: 3.7rem;
+}
+
+.publications-notice .slick-prev::before {
+  background-image: url(../img/path.png);
+}
+
+.publications-notice .slick-next {
+  right: 3.7rem;
+}
+
+.publications-notice .slick-next::before {
+  background-image: url(../img/path_2.png);
+}
+
+.publications-notice__item {
+  border-radius: 8px;
+  margin: 0 1rem;
+  box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.17);
+  border: solid 1px #dee2e6;
+  background-color: #ffffff;
+}
+
+.publications-notice__item .publications-notice__img {
+  position: relative;
+}
+
+.publications-notice__item .publications-notice__img img {
+  width: 100%;
+}
+
+.publications-notice__item .publications-notice__title {
+  font-weight: bold;
+  color: #1c3348;
+  font-size: 1.1rem;
+}
+
+.publications-notice__item .publications-notice__body {
+  padding: 2rem 1rem;
+}
+
+.publications-notice__item .main-general__description {
+  width: 100%;
+  margin-top: 0;
+  text-align: inherit;
+}
+
+.publications-notice__item .publications-notice__info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.publications-notice__item .publications-notice__user {
+  color: #7ed321;
+}
+
+.publications-notice__item .publications-notice__date {
+  color: #1c3348;
+}
+
+.publications-notice__item .publications-notice__user,
+  .publications-notice__item .publications-notice__date {
+  display: flex;
+  margin-right: 5px;
+}
+
+.publications-notice__item .publications-notice__user img,
+    .publications-notice__item .publications-notice__date img {
+  margin-right: 2px;
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+
+.publications-notice__item .publications-notice__btn {
+  color: #1c3348;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.publications-notice__item .publications-notice__etiq {
+  width: 32px;
+  height: 25px;
+  border-radius: 2px;
+  background-color: #7ed321;
+  position: absolute;
+  bottom: -13px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publications-notice__item .publications-notice__etiq span {
+  color: #fff;
+  font-size: .9rem;
+  font-weight: bold;
+}
