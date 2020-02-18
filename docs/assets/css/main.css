@@ -2774,9 +2774,15 @@ button:focus {
 .publications-notice__item {
   border-radius: 8px;
   margin: 0 1rem;
+  transition: .3s;
   box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.17);
   border: solid 1px #dee2e6;
   background-color: #ffffff;
+}
+
+.publications-notice__item:hover {
+  box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.29);
+  transition: .3s;
 }
 
 .publications-notice__item .publications-notice__img {
@@ -2906,7 +2912,13 @@ button:focus {
   box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.17);
   background-color: #ffffff;
   padding: 4rem 2rem;
+  transition: .3s;
   position: relative;
+}
+
+.publications-norma__item:hover {
+  box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.4);
+  transition: .3s;
 }
 
 .publications-norma__item .publications-norma__title {
@@ -2958,6 +2970,12 @@ button:focus {
   background-color: #ffffff;
   display: flex;
   padding: 2rem;
+  transition: .3s;
+}
+
+.publications-info__item:hover {
+  transition: .3s;
+  box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.4);
 }
 
 .publications-info__item .publications-info__icon {
@@ -3034,6 +3052,12 @@ button:focus {
   border-radius: 8px;
   border: solid 1px #dee2e6;
   background-color: #ffffff;
+  transition: .3s;
+}
+
+.publications-events__item:hover {
+  box-shadow: 0 2px 17px 0 rgba(76, 167, 82, 0.15);
+  transition: .3s;
 }
 
 .publications-events__item .publications-events__title {
