@@ -1146,7 +1146,7 @@ button:focus {
 }
 
 .nav-link:hover {
-  color: #9dcc49;
+  color: #9dcc49 !important;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -1746,44 +1746,6 @@ button:focus {
   color: #007844;
 }
 
-.main-footer .site-map {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-@media (min-width: 0px) and (max-width: 767px) {
-  .main-footer .site-map {
-    padding: 0 2rem;
-  }
-}
-
-.main-footer .site-map li {
-  margin-bottom: .7rem;
-}
-
-.main-footer .site-map li a {
-  color: #4a4a4a;
-  transition: .3s;
-  font-weight: 500;
-}
-
-.main-footer .site-map li a:hover {
-  color: #007844;
-  transition: .3s;
-}
-
-.main-footer .site-map li::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #4ca752;
-  font-weight: bold;
-  margin-right: 3px;
-  margin-left: -18px;
-  display: inline-block;
-}
-
 .main-footer .main-footer__title {
   font-weight: bold;
   border-bottom: 1px solid #95b994;
@@ -1820,6 +1782,44 @@ button:focus {
 .main-footer .rrss__item:hover {
   color: #007844;
   transition: .3s;
+}
+
+.site-map {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .site-map {
+    padding: 0 2rem;
+  }
+}
+
+.site-map li {
+  margin-bottom: .7rem;
+}
+
+.site-map li a {
+  color: #4a4a4a;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.site-map li a:hover {
+  color: #007844;
+  transition: .3s;
+}
+
+.site-map li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #4ca752;
+  font-weight: bold;
+  margin-right: 3px;
+  margin-left: -18px;
+  display: inline-block;
 }
 
 .main-powered {
@@ -2803,36 +2803,6 @@ button:focus {
   text-align: inherit;
 }
 
-.publications-notice__item .publications-notice__info {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: .9rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.publications-notice__item .publications-notice__user {
-  color: #7ed321;
-}
-
-.publications-notice__item .publications-notice__date {
-  color: #1c3348;
-}
-
-.publications-notice__item .publications-notice__user,
-  .publications-notice__item .publications-notice__date {
-  display: flex;
-  margin-right: 9px;
-}
-
-.publications-notice__item .publications-notice__user img,
-    .publications-notice__item .publications-notice__date img {
-  margin-right: 2px;
-  width: 1rem;
-  height: 1rem;
-  object-fit: contain;
-}
-
 .publications-notice__item .publications-notice__btn {
   color: #1c3348;
   font-size: .9rem;
@@ -2856,6 +2826,36 @@ button:focus {
   color: #fff;
   font-size: .9rem;
   font-weight: bold;
+}
+
+.publications-notice__info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.publications-notice__user {
+  color: #7ed321;
+}
+
+.publications-notice__date {
+  color: #1c3348;
+}
+
+.publications-notice__user,
+.publications-notice__date {
+  display: flex;
+  margin-right: 9px;
+}
+
+.publications-notice__user img,
+  .publications-notice__date img {
+  margin-right: 2px;
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
 }
 
 .publications-norma {
@@ -3073,4 +3073,166 @@ button:focus {
   width: 100%;
   color: #4a4a4a;
   text-align: initial;
+}
+
+.post-detail .container-grid {
+  grid-template-columns: 50% 1fr;
+  gap: 9rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .post-detail .container-grid {
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .post-detail .container-grid {
+    gap: 2rem;
+  }
+}
+
+.post-detail .post-sidebar__title {
+  color: #1c3348;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.post-detail .main-general__description {
+  width: 100%;
+  text-align: initial;
+  color: #4a4a4a;
+  margin-top: 0;
+}
+
+.post-detail .site-map {
+  padding-left: 1.5rem;
+  border-top: solid 1px #dee2e6;
+  padding-top: 13px;
+  margin-bottom: 2rem;
+}
+
+.post-detail .post-detail__img img {
+  width: 100%;
+}
+
+.post-detail .post-detail__cite {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  /* background: antiquewhite; */
+  background-color: #e9ecee;
+}
+
+.post-detail .post-detail__cite .main-general__description {
+  margin-bottom: 0;
+}
+
+.post-detail .post-detail__btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-detail .post-detail__btn a {
+  border-radius: 7px;
+  border: solid 1px #dee2e6;
+  color: #4a4a4a;
+  font-weight: bold;
+  padding: .7rem 1.5rem;
+}
+
+.post-detail .post-detail__comillas img {
+  width: 2rem;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+
+.post-detail .post-detail__sidebar {
+  padding-right: 6rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .post-detail .post-detail__sidebar {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .post-detail .post-detail__sidebar {
+    padding-right: 0;
+  }
+}
+
+.post-detail .publications-notice__user,
+.post-detail .publications-notice__date {
+  color: #4a4a4a;
+}
+
+.post-detail .post-detail__body {
+  padding: 2rem 1rem;
+  border: solid 1px #dee2e6;
+  margin-bottom: 2rem;
+}
+
+.post-detail .post-detail__search {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.post-detail .post-detail__search a {
+  background-color: #7ed321;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  padding: .7rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.post-detail .post-detail__search input {
+  padding: .7rem 1rem;
+  background-color: #e9ecee;
+  width: 100%;
+  border: solid 1px #dee2e6;
+}
+
+.post-detail__form .main-general__title {
+  text-align: initial;
+}
+
+.post-detail__form .main-general__title::before {
+  display: none;
+}
+
+.post-detail__form input,
+.post-detail__form textarea {
+  border-radius: 2px;
+  border: solid 1px #dee2e6;
+  background-color: #ffffff;
+  padding: .6rem 1rem;
+  width: 48%;
+  margin-bottom: 1rem;
+}
+
+.post-detail__form input::placeholder,
+  .post-detail__form textarea::placeholder {
+  font-weight: 600;
+}
+
+.post-detail__form textarea {
+  height: 6rem;
+}
+
+.post-detail__form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post-detail__form input[type=email],
+.post-detail__form textarea {
+  width: 100%;
 }

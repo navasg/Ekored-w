@@ -1,0 +1,334 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }/
+    %title Ekored
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick-theme.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/main.css' }/
+    %link{ rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }/
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
+    %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
+  %body
+    %header.fixed-top.navbar-fixed-js      
+      %nav.navbar.navbar-expand-lg
+        .container
+          .main-brand__top
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+          .main-brand__fixed
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored" }/ 
+          .main-brand.brand-responsive
+            %a.navbar-brand{ :href => 'index.html' }
+              %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+            %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.ml-autos{ 'data-toggle' => 'offcanvas', :type => 'button' }
+              %span.hamburger-box
+              %span.hamburger-inner
+          .navbar-collapse.offcanvas-collapse
+            %ul.navbar-nav.mr-autos
+              %li.nav-item
+                %a.nav-link.nav-link-p{:href => 'nosotros.html',:data-toggle => 'offcanvas' } 
+                  Quénes Somos
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "attraction-and-talent-selection.html"} 
+                -#   %li
+                -#     %a{:href => "youth-program.html"} 
+                -#   %li
+                -#     %a{:href => "career-development.html"} 
+                -#   %li
+                -#     %a{:href => "evaluation-and-career.html"} Zona de Clientes
+                -#   %li
+                -#     %a{:href => "inhouse-consultant.html"} 
+                -#   %li
+                -#     %a{:href => "employer-brand.html"} Marca empleadora
+              %li.nav-item
+                %a.nav-link.nav-link-p{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  PET
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "diversity-and-inclusion.html"} Diversidad e inclusión
+                -#   %li
+                -#     %a{:href => "future-of-work.html"} Futuro del trabajo
+                -#   %li
+                -#     %a{:href => "future-of-education.html"} Futuro de la educación
+                -#   %li
+                -#     %a{:href => "brand-building.html"} Construcción de marca empleadora
+                -#   %li
+                -#     %a{:href => "dream-race.html"} Carrera de los sueños de los jovenes
+              %li.nav-item
+                %a.nav-link.nav-link-p{:data-toggle => 'offcanvas', :href => "publicaciones.html", :role => "button"}
+                  Publicaciones
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "index.html"} Media y alta gerencia
+                -#   %li
+                -#     %a{:href => "index.html"} Profesionales
+              %li.nav-item
+                %a.nav-link.nav-link-p{:data-toggle => 'offcanvas', :href => "prensa.html", :role => "button"}
+                  Prensa
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "career-tips.html"} Consejos de carrera
+                -#   %li
+                -#     %a{:href => "human-management.html"} Gestión humana como aliado estratégico del negocio 
+              %li.nav-item
+                %a.nav-link.nav-link-p{:href => 'proveedores.html',:data-toggle => 'offcanvas' } Proveedores
+              %li.nav-item
+                %a.nav-link.nav-link-p.main-general__button{:href => 'contacto.html',:data-toggle => 'offcanvas' } Contáctanos
+            -# %ul.main-rrss__responsive
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook-logo-in-circular-button-outlined-social-symbol_2@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_5@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_6@3x.png'}
+    %section.main-banner
+      .main-banner__content
+        .main-banner__item
+          .main-banner__text.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+            .container
+              .main-banner__title
+                %p 
+                  Lorem ipsum dolor sit amet consectetur 
+              .main-banner__subtitle 
+                %p  
+                  Auctor mauris vehicula quisque posuere erat malesuada ad sapien aliquam odio suspendisse, fusce leo condimentum in tempus magnis tortor ante purus scelerisque. Consequat pellentesque elementum velit ad netus facilisi praesent libero
+              %br              
+              %a.main-general__button{:href=>''}VER MÁS
+          .main-banner__img
+            %img{:src=>"assets/img/image_8.png", :alt=>"Imagen Banner"}/
+    %section.main-services
+
+      .main-services__bg
+      .container.padding-top-bottom
+        %h2.main-general__title.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          Lorem ipsum dolor 
+        .d-flex.justify-content-center
+          %p.main-general__description.main-general__description--bold
+            Nos enfocamos en que productos y servicios cuenten con altos índices de calidad que reduzcan el impacto ambiental.
+        .container-grid.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          .main-services__item
+            .d-flex.justify-content-center
+              %img.main-services__icon{:src=>"assets/img/icon_11@3x.png",  :alt=>"Icono de Servicio"}
+            %h2.main-general__title--small.main-general__title
+              Comprar
+            %p.main-general__description.main-general__description--dark
+              Logística, captación, compra y transporte de material PET a nivel país, mediante una red de reciclaje enfocada en el aprovechamiento de residuos.
+          .main-services__item
+            .d-flex.justify-content-center
+              %img.main-services__icon{:src=>"assets/img/icon_12@3x.png",  :alt=>"Icono de Servicio"}
+            %h2.main-general__title--small.main-general__title
+              Separación
+            %p.main-general__description.main-general__description--dark
+              Con un personal altamente calificado y una eficiente maquinaria se realiza la clasificación del material, (separación por colores, etiquetas y tipos de plásticos) de acuerdo a las condiciones de calidad determinadas por Enka de Colombia.
+          .main-services__item
+            .d-flex.justify-content-center
+              %img.main-services__icon{:src=>"assets/img/icon_13@3x.png",  :alt=>"Icono de Servicio"}
+            %h2.main-general__title--small.main-general__title
+              Compactación
+            %p.main-general__description.main-general__description--dark
+              Este proceso consiste en el prensaje que se le hace a las botellas ya clasificadas, con el fin de reducir el espacio en el transporte y poder desplazar más material en menos viajes.
+    %section.main-about
+      %img.main-about__img{:src=>"assets/img/image_7@3x.png",  :alt=>"Imagen about"}
+      .container.padding-top-bottom
+        %h3.main-general__pretitle.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          ACERCA DE
+        %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          Nuestros Servicios
+        %p.main-general__description.main-general__description--dark
+          Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+        .container-grid
+          .main-about__item
+            %a{ :href=>"interna.html"}
+              %img{'data-src'=>"assets/img/icon_10@2x.png", :alt=>"icon chat"}
+              Proyectos
+          .main-about__item
+            %a{:href=>"interna.html"}
+              %img{'data-src'=>"assets/img/icon_8@2x.png", :alt=>"icon chat"}
+              Economía Circular
+          .main-about__item
+            %a{:href=>"interna.html"}
+              %img{'data-src'=>"assets/img/icon_9@2x.png", :alt=>"icon chat"}
+              ODS
+          .main-about__item
+            %img{'data-src'=>"assets/img/sprout@2x.png", :alt=>"icon chat"}
+            %a{:href=>"interna.html"}
+              Cambio Climático
+    %section.main-video
+      .container.padding-top-bottom
+        %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          Nuestros videos
+        .d-flex.justify-content-center
+          %p.main-general__description
+            Nos enfocamos en que productos y servicios cuenten con altos índices de calidad que reduzcan el impacto ambiental.
+        .container-grid
+          .main-video_item
+            %img.main-video__img{:src=>"assets/img/image@3x.png"}/
+            %a{:href=>""}
+              %img.main-video__icon{:src=>"assets/img/icon_7@3x.png"}/
+
+          .main-video_item              
+            %img.main-video__img{:src=>"assets/img/image_2@3x.png"}/
+            %a{:href=>""}
+              %img.main-video__icon{:src=>"assets/img/icon_7@3x.png"}/
+    
+    %section.main-gallery
+      .main-gallery__bg
+      .container.padding-top-bottom
+        %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          Galería
+        .d-flex.justify-content-center
+          %p.main-general__description
+            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+        .main-gallery__carousel
+          .main-gallery__item
+            %img{:src=>"assets/img/image_3@3x.png" }/
+          .main-gallery__item
+            %img{:src=>"assets/img/image_4@3x.png" }/
+          .main-gallery__item
+            %img{:src=>"assets/img/image_5@3x.png" }/
+          .main-gallery__item
+            %img{:src=>"assets/img/image_6@3x.png" }/
+          .main-gallery__item
+            %img{:src=>"assets/img/image_6@3x.png" }/
+    %section.main-contact
+      .container
+        .container-grid
+          .main-contact__img
+            %img{'data-src'=>"assets/img/illustration@3x.png", :alt=>"Imagen contacto"}
+          .main-contact__form
+            %h3.main-general__pretitle.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              QUIERES
+            %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              Contactarnos
+            %p.main-general__description.main-general__description--dark
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi 
+            %form{:action=>""}
+              %input{:type=>"text", :placeholder=>"Nombre"}/
+              %input{:type=>"text", :placeholder=>"Teléfono"}/
+              %input{:type=>"email", :placeholder=>"Correo"}/
+              %textarea{:placeholder=>"Mensaje"}
+              .d-flex.justify-content-center.container-form
+                %a.main-general__button{:href=>''}Enviar
+    .main-metrics
+      .container
+        .container-grid
+          .main-metrics__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .1s  ;"}
+            %img{:src=>"assets/img/icon_5@3x.png"}/
+            %p.main-metrics__number
+              8
+            %p.main-metrics__description
+              Canastillas recolectoras de PET en todo el departamento de Antioquia
+          .main-metrics__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .2s  ;"}
+            %img{:src=>"assets/img/icon_4@3x.png"}/
+            %p.main-metrics__number
+              1,9
+            %p.main-metrics__description
+              Botellas de PET recolectadas diariamente
+          .main-metrics__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .3s  ;"}
+            %img{:src=>"assets/img/icon_3@3x.png"}/
+            %p.main-metrics__number
+              27
+            %p.main-metrics__description
+              Departamentos de apoyo
+          .main-metrics__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .4s  ;"}
+            %img{:src=>"assets/img/icon_2@3x.png"}/
+            %p.main-metrics__number
+              600
+            %p.main-metrics__description
+              Proveedores
+          .main-metrics__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .5s  ;"}
+            %img{:src=>"assets/img/icon@3x.png"}/
+            %p.main-metrics__number
+              110
+            %p.main-metrics__description
+              Compactadoras entregadas en comodato por todo el país
+    %footer.main-footer
+      .container.padding-top-bottom
+        .container-grid
+          .main-footer__item
+            .main-footer__logo
+              %img{:src=>"assets/img/logo_2@2x.png" }/
+            %p.main-footer__description
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+          .main-footer__item
+            %h2.main-footer__title
+              Menú 
+            %ul.site-map
+              %li
+                %a{:href=>"nosotros.html"}
+                  Quiénes Somos 
+              %li
+                %a{:href=>"servicios.html"}
+                  Servicios
+              %li
+                %a{:href=>"publicaciones.html"}
+                  Publicaciones 
+              %li
+                %a{:href=>"proveedores.html"}
+                  Proveedores
+              %li
+                %a{:href=>"contacto.html"}
+                  Contácto 
+          .main-footer__item
+            %h2.main-footer__title
+              Datos de Contacto
+            %ul.list-contact
+              %li
+                %a{:href=>""}
+                  %i.fa.fa-map-marker 
+                  Carrera 51b #78-40
+              %li
+                %a{:href=>"mailto:info@ekored.co"}
+                  %i.fa.fa-envelope-o
+                  Email: info@ekored.co
+              %li
+                %a{:href=>"tel:5744443569"}
+                  %i.fa.fa-phone 
+                  Phone: 57 (4) 444 35 69
+          .main-footer__item
+            %h2.main-footer__title
+              Nuestras Redes
+            .main-footer__rrss
+              %a.rrss__item{:href=>"https://www.facebook.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-facebook 
+              %a.rrss__item{:href=>"https://twitter.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-twitter 
+              %a.rrss__item{:href=>"https://www.youtube.com/channel/UCSRIAcCn4BsyyqK4WywatZg", :target=>"_blank"}
+                %i.fa.fa-youtube-play 
+              %a.rrss__item{:href=>"https://www.instagram.com/ekoredco/", :target=>"_blank"}
+                %i.fa.fa-instagram 
+    
+    %a#js_up.boton-subir.slider-top{:href => "#"}
+      %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
+
+
+    .main-powered
+      .container 
+        .d-flex.justify-content-center.p-4.main-powered__flex
+          %p Copyright © 2019 
+          %a{:href=>"https://sigma.la/"} Sigma Studios 
+          %p - Sitios Web
+    .main-whatsapp
+      %a{:target=>"_blank", :href=>"https://wa.me/573176383948"}
+        %img{'data-src'=>"assets/img/whatsapp@3x.png", :alt=>"icon chat"}
+
+    %script{src: 'assets/js/jquery.min.js' }
+    %script{:crossorigin => "anonymous", :integrity => "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    %script{src: 'assets/js/slick.min.js' }
+    %script{src: 'assets/js/setting-slick.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js' }
+    %script{src: 'assets/js/main.js' }
+

@@ -1,0 +1,270 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }/
+    %title Ekored
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick-theme.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/main.css' }/
+    %link{ rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }/
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
+    %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
+  %body
+    %header.fixed-top.navbar-fixed-js.navbar-fixed-js--custom       
+      %nav.navbar.navbar-expand-lg
+        .container
+          .main-brand__top
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+          .main-brand__fixed
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored" }/ 
+          .main-brand.brand-responsive
+            %a.navbar-brand{ :href => 'index.html' }
+              %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+            %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.ml-autos{ 'data-toggle' => 'offcanvas', :type => 'button' }
+              %span.hamburger-box
+              %span.hamburger-inner
+          .navbar-collapse.offcanvas-collapse
+            %ul.navbar-nav.mr-autos
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:href => 'nosotros.html',:data-toggle => 'offcanvas' }
+                  Quénes Somos
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "attraction-and-talent-selection.html"} 
+                -#   %li
+                -#     %a{:href => "youth-program.html"} 
+                -#   %li
+                -#     %a{:href => "career-development.html"} 
+                -#   %li
+                -#     %a{:href => "evaluation-and-career.html"} Zona de Clientes
+                -#   %li
+                -#     %a{:href => "inhouse-consultant.html"} 
+                -#   %li
+                -#     %a{:href => "employer-brand.html"} Marca empleadora
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  PET
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "diversity-and-inclusion.html"} Diversidad e inclusión
+                -#   %li
+                -#     %a{:href => "future-of-work.html"} Futuro del trabajo
+                -#   %li
+                -#     %a{:href => "future-of-education.html"} Futuro de la educación
+                -#   %li
+                -#     %a{:href => "brand-building.html"} Construcción de marca empleadora
+                -#   %li
+                -#     %a{:href => "dream-race.html"} Carrera de los sueños de los jovenes
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:data-toggle => 'offcanvas', :href => "publicaciones.html", :role => "button"}
+                  Publicaciones
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "index.html"} Media y alta gerencia
+                -#   %li
+                -#     %a{:href => "index.html"} Profesionales
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{ :data-toggle => 'offcanvas', :href => "prensa.html", :role => "button"}
+                  Prensa
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "career-tips.html"} Consejos de carrera
+                -#   %li
+                -#     %a{:href => "human-management.html"} Gestión humana como aliado estratégico del negocio 
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:href => 'proveedores.html',:data-toggle => 'offcanvas' } Proveedores
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link.main-general__button{:href => 'about.html',:data-toggle => 'offcanvas' } ¡Ayudanos a mejorar!
+            -# %ul.main-rrss__responsive
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook-logo-in-circular-button-outlined-social-symbol_2@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_5@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_6@3x.png'}
+    %section.general-banner{:style=>"background-image:url('assets/img/servicios/image@3x.png')"}
+      .general-banner__mask
+        %h2.general-banner__title
+          Proveedores
+    %section.suppliers-quality
+      .container.padding-top-bottom
+        .container-grid
+          .suppliers-quality__text
+            %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              Calidad Material
+            %p.main-general__description.main-general__description--dark
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+            .suppliers-quality__grid
+              .suppliers-quality__item
+                .suppliers-quality__icon
+                  %img{:src=>"assets/img/proveedores/icon1.png", :alt=>"img"}/
+                %h2.suppliers-quality__title
+                  Requisitos de calidad
+                %p.main-general__description.main-general__description--dark
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              .suppliers-quality__item
+                .suppliers-quality__icon
+                  %img{:src=>"assets/img/proveedores/icon2.png", :alt=>"img"}/
+                %h2.suppliers-quality__title
+                  Marcación de pacas
+                %p.main-general__description.main-general__description--dark
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              .suppliers-quality__item
+                .suppliers-quality__icon
+                  %img{:src=>"assets/img/proveedores/icon3.png", :alt=>"img"}/
+                %h2.suppliers-quality__title
+                  Amarre de pacas
+                %p.main-general__description.main-general__description--dark
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              .suppliers-quality__item
+                .suppliers-quality__icon
+                  %img{:src=>"assets/img/proveedores/icon4.png", :alt=>"img"}/
+                %h2.suppliers-quality__title
+                  Etiquetas
+                %p.main-general__description.main-general__description--dark
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              .suppliers-quality__item
+                .suppliers-quality__icon
+                  %img{:src=>"assets/img/proveedores/icon5.png", :alt=>"img"}/
+                %h2.suppliers-quality__title
+                  Requisitos para ingresar a Enka - EKO-RED
+                %p.main-general__description.main-general__description--dark
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              .suppliers-quality__item
+                .suppliers-quality__icon
+                  %img{:src=>"assets/img/proveedores/icon6.png", :alt=>"img"}/
+                %h2.suppliers-quality__title
+                  Imagenes
+                %p.main-general__description.main-general__description--dark
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+          .suppliers-quality__img
+            %img{:src=>"assets/img/proveedores/proveedores.png", :alt=>"img"}/
+
+    %section.single-phrase
+      .single-phrase__mask
+        .container    
+          %h2.single-phrase__title
+            1,9 millones de botellas diarias
+          %p.single-phrase__subtitle
+            Un aliado estratégico en procesos sociales y ambientales
+    %section.single-collapse
+      .container.padding-top-bottom
+        .container-grid
+          .single-collapse__img
+            %img{:src=>"assets/img/single/collapse.png", :alt=>"img"}/
+          .single-collapse__text
+            %h3.main-general__pretitle.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              ACERCA DE
+            %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              Lorem Ipsum
+            %p.main-general__description.main-general__description--dark
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+            .single-collapse__content 
+              .accordion-option
+                -# %a.toggle-accordion.active{"accordion-id" => "#accordion", :href => "javascript:void(0)"}
+              .clearfix
+              #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+                .panel.panel-default
+                  #headingOne.panel-heading{:role => "tab"}
+                    %h4.panel-title 
+                      %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
+                        Lorem ipsum dolor sit amet consectetur adipiscing 
+                  #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+                    .panel-body
+                      Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+                .panel.panel-default
+                  #headingTwo.panel-heading{:role => "tab"}
+                    %h4.panel-title 
+                      %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
+                        Lorem ipsum dolor sit amet consectetur adipiscing 
+                  #collapseTwo.panel-collapse.collapse.in{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+                    .panel-body
+                      Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+              
+    %footer.main-footer
+      .container.padding-top-bottom
+        .container-grid
+          .main-footer__item
+            .main-footer__logo
+              %img{:src=>"assets/img/logo_2@2x.png" }/
+            %p.main-footer__description
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+          .main-footer__item
+            %h2.main-footer__title
+              Menú 
+            %ul.site-map
+              %li
+                %a{:href=>"nosotros.html"}
+                  Quiénes Somos 
+              %li
+                %a{:href=>"servicios.html"}
+                  Servicios
+              %li
+                %a{:href=>"publicaciones.html"}
+                  Publicaciones 
+              %li
+                %a{:href=>"proveedores.html"}
+                  Proveedores
+              %li
+                %a{:href=>"contacto.html"}
+                  Contácto 
+          .main-footer__item
+            %h2.main-footer__title
+              Datos de Contacto
+            %ul.list-contact
+              %li
+                %a{:href=>""}
+                  %i.fa.fa-map-marker 
+                  Carrera 51b #78-40
+              %li
+                %a{:href=>"mailto:info@ekored.co"}
+                  %i.fa.fa-envelope-o
+                  Email: info@ekored.co
+              %li
+                %a{:href=>"tel:5744443569"}
+                  %i.fa.fa-phone 
+                  Phone: 57 (4) 444 35 69
+          .main-footer__item
+            %h2.main-footer__title
+              Nuestras Redes
+            .main-footer__rrss
+              %a.rrss__item{:href=>"https://www.facebook.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-facebook 
+              %a.rrss__item{:href=>"https://twitter.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-twitter 
+              %a.rrss__item{:href=>"https://www.youtube.com/channel/UCSRIAcCn4BsyyqK4WywatZg", :target=>"_blank"}
+                %i.fa.fa-youtube-play 
+              %a.rrss__item{:href=>"https://www.instagram.com/ekoredco/", :target=>"_blank"}
+                %i.fa.fa-instagram 
+
+      %a#js_up.boton-subir.slider-top{:href => "#"}
+        %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
+      .main-powered
+        .container 
+          .d-flex.justify-content-center.p-4
+            %p Copyright © 2019 
+            %a{:href=>"https://sigma.la/"} Sigma Studios 
+            %p - Sitios Web
+    .main-whatsapp
+      %a{:target=>"_blank", :href=>"https://wa.me/573176383948"}
+        %img{'data-src'=>"assets/img/whatsapp@3x.png", :alt=>"icon chat"}
+
+    %script{src: 'assets/js/jquery.min.js' }
+    %script{:crossorigin => "anonymous", :integrity => "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    %script{src: 'assets/js/slick.min.js' }
+    %script{src: 'assets/js/setting-slick.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js' }
+    %script{src: 'assets/js/main.js' }
+

@@ -1,0 +1,271 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }/
+    %title Ekored
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick-theme.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/main.css' }/
+    %link{ rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }/
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
+    %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
+  %body
+    %header.fixed-top.navbar-fixed-js.navbar-fixed-js--custom       
+      %nav.navbar.navbar-expand-lg
+        .container
+          .main-brand__top
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+          .main-brand__fixed
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored" }/ 
+          .main-brand.brand-responsive
+            %a.navbar-brand{ :href => 'index.html' }
+              %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+            %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.ml-autos{ 'data-toggle' => 'offcanvas', :type => 'button' }
+              %span.hamburger-box
+              %span.hamburger-inner
+          .navbar-collapse.offcanvas-collapse
+            %ul.navbar-nav.mr-autos
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:href => 'nosotros.html',:data-toggle => 'offcanvas' }
+                  Quénes Somos
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "attraction-and-talent-selection.html"} 
+                -#   %li
+                -#     %a{:href => "youth-program.html"} 
+                -#   %li
+                -#     %a{:href => "career-development.html"} 
+                -#   %li
+                -#     %a{:href => "evaluation-and-career.html"} Zona de Clientes
+                -#   %li
+                -#     %a{:href => "inhouse-consultant.html"} 
+                -#   %li
+                -#     %a{:href => "employer-brand.html"} Marca empleadora
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  PET
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "diversity-and-inclusion.html"} Diversidad e inclusión
+                -#   %li
+                -#     %a{:href => "future-of-work.html"} Futuro del trabajo
+                -#   %li
+                -#     %a{:href => "future-of-education.html"} Futuro de la educación
+                -#   %li
+                -#     %a{:href => "brand-building.html"} Construcción de marca empleadora
+                -#   %li
+                -#     %a{:href => "dream-race.html"} Carrera de los sueños de los jovenes
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:data-toggle => 'offcanvas', :href => "publicaciones.html", :role => "button"}
+                  Publicaciones
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "index.html"} Media y alta gerencia
+                -#   %li
+                -#     %a{:href => "index.html"} Profesionales
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{ :data-toggle => 'offcanvas', :href => "prensa.html", :role => "button"}
+                  Prensa
+                -# %ul-menu
+                -#   %li
+                -#     %a{:href => "career-tips.html"} Consejos de carrera
+                -#   %li
+                -#     %a{:href => "human-management.html"} Gestión humana como aliado estratégico del negocio 
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:href => 'proveedores.html',:data-toggle => 'offcanvas' } Proveedores
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link.main-general__button{:href => 'about.html',:data-toggle => 'offcanvas' } ¡Ayudanos a mejorar!
+            -# %ul.main-rrss__responsive
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook-logo-in-circular-button-outlined-social-symbol_2@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_5@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_6@3x.png'}
+    %section.general-banner{:style=>"background-image:url('assets/img/servicios/image@3x.png')"}
+      .general-banner__mask
+        %h2.general-banner__title
+          Prensa
+    %section.post-detail
+      .container.padding-top-bottom
+        .container-grid
+          .press-detail__content
+            .post-detail__img
+              %img{:src=>"assets/img/prensa/prensa.png" }/
+            .post-detail__body
+              .publications-notice__info
+                .publications-notice__user
+                  %img{:src=>"assets/img/publicaciones/user-3@3x.png" }/
+                  Andrea Miller
+                .publications-notice__date
+                  %img{:src=>"assets/img/prensa/calendar-1@3x.png" }/
+                  April 24,2019
+              %p.main-general__description
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+              .post-detail__cite
+                .post-detail__comillas
+                  %img{:src=>"assets/img/prensa/comillas@3x.png" }/
+                %p.main-general__description
+                  Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta).
+              %p.main-general__description
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+            .post-detail__body
+              .post-detail__btn
+                %a{:href=>"#"} anterior
+                %a{:href=>"#"} Después
+            .post-detail__body
+              .post-detail__form
+                %h3.main-general__pretitle.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+                  DEJA
+                %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+                  Una respuesta
+                %p.main-general__description.main-general__description--dark.mb-3 
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi 
+                %form{:action=>""}
+                  %input{:type=>"text", :placeholder=>"Nombre"}/
+                  %input{:type=>"text", :placeholder=>"Asunto"}/
+                  %input{:type=>"email", :placeholder=>"Correo"}/
+                  %textarea{:placeholder=>"Mensaje"}
+                  .d-flex.justify-content-center.container-form
+                    %a.main-general__button{:href=>''}Enviar
+          .post-detail__sidebar
+            %form{:action => "#"}
+              .post-detail__search
+                %input{:placeholder => "Noticias", :type => "text"}/
+                %a{:href => "#"} Buscar
+
+            %p.post-sidebar__title
+              Noticias recientes
+            %ul.site-map
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur 
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur 
+            %p.post-sidebar__title
+              Comentarios
+            %ul.site-map
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur 
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur 
+            %p.post-sidebar__title
+              Noticias
+            %ul.site-map
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur 
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur
+              %li
+                %a{:href=>"prensa.html"}
+                  How to start your business as an entrepreneur 
+    %footer.main-footer
+      .container.padding-top-bottom
+        .container-grid
+          .main-footer__item
+            .main-footer__logo
+              %img{:src=>"assets/img/logo_2@2x.png" }/
+            %p.main-footer__description
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+          .main-footer__item
+            %h2.main-footer__title
+              Menú 
+            %ul.site-map
+              %li
+                %a{:href=>"nosotros.html"}
+                  Quiénes Somos 
+              %li
+                %a{:href=>"servicios.html"}
+                  Servicios
+              %li
+                %a{:href=>"publicaciones.html"}
+                  Publicaciones 
+              %li
+                %a{:href=>"proveedores.html"}
+                  Proveedores
+              %li
+                %a{:href=>"contacto.html"}
+                  Contácto 
+          .main-footer__item
+            %h2.main-footer__title
+              Datos de Contacto
+            %ul.list-contact
+              %li
+                %a{:href=>""}
+                  %i.fa.fa-map-marker 
+                  Carrera 51b #78-40
+              %li
+                %a{:href=>"mailto:info@ekored.co"}
+                  %i.fa.fa-envelope-o
+                  Email: info@ekored.co
+              %li
+                %a{:href=>"tel:5744443569"}
+                  %i.fa.fa-phone 
+                  Phone: 57 (4) 444 35 69
+          .main-footer__item
+            %h2.main-footer__title
+              Nuestras Redes
+            .main-footer__rrss
+              %a.rrss__item{:href=>"https://www.facebook.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-facebook 
+              %a.rrss__item{:href=>"https://twitter.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-twitter 
+              %a.rrss__item{:href=>"https://www.youtube.com/channel/UCSRIAcCn4BsyyqK4WywatZg", :target=>"_blank"}
+                %i.fa.fa-youtube-play 
+              %a.rrss__item{:href=>"https://www.instagram.com/ekoredco/", :target=>"_blank"}
+                %i.fa.fa-instagram 
+    
+    %a#js_up.boton-subir.slider-top{:href => "#"}
+      %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
+
+
+    .main-powered
+      .container 
+        .d-flex.justify-content-center.p-4.main-powered__flex
+          %p Copyright © 2019 
+          %a{:href=>"https://sigma.la/"} Sigma Studios 
+          %p - Sitios Web
+    .main-whatsapp
+      %a{:target=>"_blank", :href=>"https://wa.me/573176383948"}
+        %img{'data-src'=>"assets/img/whatsapp@3x.png", :alt=>"icon chat"}
+
+    %script{src: 'assets/js/jquery.min.js' }
+    %script{:crossorigin => "anonymous", :integrity => "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    %script{src: 'assets/js/slick.min.js' }
+    %script{src: 'assets/js/setting-slick.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js' }
+    %script{src: 'assets/js/main.js' }
+
+    

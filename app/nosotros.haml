@@ -1,0 +1,364 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }/
+    %title Ekored
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick-theme.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/main.css' }/
+    %link{ rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }/
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
+    %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
+  %body
+    %header.fixed-top.navbar-fixed-js.navbar-fixed-js--custom         
+      %nav.navbar.navbar-expand-lg
+        .container
+          .main-brand__top
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+          .main-brand__fixed
+            .main-brand
+              %a.navbar-brand{ :href => 'index.html' }
+                %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored" }/ 
+          .main-brand.brand-responsive
+            %a.navbar-brand{ :href => 'index.html' }
+              %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+            %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.ml-autos{ 'data-toggle' => 'offcanvas', :type => 'button' }
+              %span.hamburger-box
+              %span.hamburger-inner
+          .navbar-collapse.offcanvas-collapse
+            %ul.navbar-nav.mr-autos
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:href => 'nosotros.html',:data-toggle => 'offcanvas' }                
+                  Quénes Somos
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "attraction-and-talent-selection.html"} 
+                -#   %li
+                -#     %a{:href => "youth-program.html"} 
+                -#   %li
+                -#     %a{:href => "career-development.html"} 
+                -#   %li
+                -#     %a{:href => "evaluation-and-career.html"} Zona de Clientes
+                -#   %li
+                -#     %a{:href => "inhouse-consultant.html"} 
+                -#   %li
+                -#     %a{:href => "employer-brand.html"} Marca empleadora
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  PET
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "diversity-and-inclusion.html"} Diversidad e inclusión
+                -#   %li
+                -#     %a{:href => "future-of-work.html"} Futuro del trabajo
+                -#   %li
+                -#     %a{:href => "future-of-education.html"} Futuro de la educación
+                -#   %li
+                -#     %a{:href => "brand-building.html"} Construcción de marca empleadora
+                -#   %li
+                -#     %a{:href => "dream-race.html"} Carrera de los sueños de los jovenes
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{ :data-toggle => 'offcanvas', :href => "publicaciones.html", :role => "button"}
+                  Publicaciones
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "index.html"} Media y alta gerencia
+                -#   %li
+                -#     %a{:href => "index.html"} Profesionales
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{ :data-toggle => 'offcanvas', :href => "prensa.html", :role => "button"}
+                  Prensa
+                -# %ul.dropdown-menu
+                -#   %li
+                -#     %a{:href => "career-tips.html"} Consejos de carrera
+                -#   %li
+                -#     %a{:href => "human-management.html"} Gestión humana como aliado estratégico del negocio 
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link{:href => 'proveedores.html',:data-toggle => 'offcanvas' } Proveedores
+              %li.nav-item
+                %a.nav-link.nav-link-p.fixed--link.main-general__button{:href => 'about.html',:data-toggle => 'offcanvas' } ¡Ayudanos a mejorar!
+            -# %ul.main-rrss__responsive
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/facebook-logo-in-circular-button-outlined-social-symbol_2@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_5@3x.png'}
+            -#   %li
+            -#     %img{:src=>'assets/img/social-linkedin-circular-button_6@3x.png'}
+    %section.general-banner{:style=>"background-image:url('assets/img/servicios/image@3x.png')"}
+      .general-banner__mask
+        %h2.general-banner__title
+          Quienes somos
+    %section.general-colum
+      .container.padding-top-bottom
+        .container-grid
+          .general-colum__img
+            %img{:src=>"assets/img/nosotros/image@3x.png", :alt=>"img"}/
+          .general-colum__text
+            %h3.main-general__pretitle.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              ACERCA DE
+            %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              Quienes somos
+            %p.main-general__description.main-general__description--dark
+              EKO RED surge en febrero del 2013 a partir de la alianza estratégica de dos modelos económicos: COOPERENKA y ENKA DE COLOMBIA.
+            %p.main-general__description.main-general__description--dark
+              ENKA DE COLOMBIA consciente de la necesidad de cerrar el ciclo de vida del PET y aprovechando su conocimiento y experiencia en la producción de resina y fibras sintéticas, desarrolló un ambicioso proyecto para recuperar las botellas de PET y transformarlas mediante proyectos de alta tecnología en resinas, fibras y filamentos, los cuales son empleados en múltiples usos textiles o plásticos con propiedades similares a aquellos provenientes de la cadena petroquímica.
+            %p.main-general__description.main-general__description--dark
+              Con el lema ¡Nosotros PETciclamos! el proyecto PETCICLO de Cooperenka generó alternativas de desarrollo y sostenimiento, con el fortalecimiento de la Red de Reciclaje Nacional, este bonito proyecto se fortalece con el departamento de la multiactividad de COOPERENKA, desarrollado en los últimos 40 años.
+            %p.main-general__description.main-general__description--dark
+              Continuado con este proyecto sustentable la alianza PETCICLO + EKO = EKORED como EMPRESA VERDE será reconocida por su triple estrategia de valor:
+    %section.about-icons
+      .container.container-grid
+        .about-icons__item.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .1s  ;"}
+          .about-icons__img
+            %img{:src=>"assets/img/nosotros/plant@3x.png", :alt=>""}/
+          .main-general__description.main-general__description--dark
+            Responsabilidad social empresarial
+        .about-icons__item.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .2s  ;"}
+          .about-icons__img
+            %img{:src=>"assets/img/nosotros/plant@3x.png", :alt=>""}/
+          .main-general__description.main-general__description--dark
+            Responsabilidad ambiental empresarial
+        .about-icons__item.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          .about-icons__img
+            %img{:src=>"assets/img/nosotros/plant@3x.png", :alt=>""}/
+          .main-general__description.main-general__description--dark
+            Crecimiento económico
+    %section.about-history
+      .container.padding-top-bottom
+        .container-grid
+          .about-history__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .1s  ;"}
+            .about-history__icon
+              %img{:src=>"assets/img/nosotros/leaf-2@3x.png", :alt=>""}/
+            .main-general__title
+              Misión
+            .main-general__description
+              EKO RED se dedica al abastecimiento, procesamiento y comercialización de material reciclado a través de la formación de la red de aprovechamiento; beneficiando el medio ambiente.
+          .about-history__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .2s  ;"}
+            .about-history__icon
+              %img{:src=>"assets/img/nosotros/green-energy@3x.png", :alt=>""}/
+            .main-general__title
+              Visión
+            .main-general__description
+              En el 2020 EKO RED será la empresa líder en abastecimiento, procesamiento y comercialización de PET reciclado en el mercado Colombiano; a través de una organización sólida e innovadora, con capacidad de interlocución en los ámbitos político, ambiental, económico y social.
+          .about-history__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .3s  ;"}
+            .about-history__icon
+              %img{:src=>"assets/img/nosotros/globe@3x.png", :alt=>""}/
+            .main-general__title
+              Política de Calidad
+            .main-general__description
+              EKO RED es una empresa orientada a la satisfacción de las necesidades de los clientes de PET reciclado, velando por la integridad y mejoramiento de sus procesos, proveedores y la comunidad, con el apoyo de un personal competente y capacitado y una infraestructura adecuada para la prestación del servicio.
+    %section.about-team 
+      .container.padding-top-bottom
+        %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          Nuestro equipo
+        .d-flex.justify-content-center
+          %p.main-general__description
+            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+        .about-team__carousel
+          .about-team__item
+            .about-team__avatar
+              %span.about-team__line
+              %img{:src=>"assets/img/nosotros/team1.png", :alt=>""}/
+            .about-team__body
+              %h3.general-card__title
+                Juan Carlos Gutiérrez Cano
+              %p.about-team__grade
+                Gerente
+              %a.about-team__mail{:href=>"mailto:juan.gutierrez@ekored.co"}
+                %i.fa.fa-envelope-o
+                juan.gutierrez@ekored.co
+              %p.main-general__description.main-general__description--dark
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+          .about-team__item
+            .about-team__avatar
+              %span.about-team__line
+              %img{:src=>"assets/img/nosotros/team2.png", :alt=>""}/
+            .about-team__body
+              %h3.general-card__title
+                Alejandra Jurado Morales
+              %p.about-team__grade
+                Comunicadora
+              %a.about-team__mail{:href=>"mailto:juan.gutierrez@ekored.co"}
+                %i.fa.fa-envelope-o
+                alejandra.jurado@ekored.co
+              %p.main-general__description.main-general__description--dark
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+          .about-team__item
+            .about-team__avatar
+              %span.about-team__line
+              %img{:src=>"assets/img/nosotros/team3.png", :alt=>""}/
+            .about-team__body
+              %h3.general-card__title
+                German Darío Vanegas Sánchez
+              %p.about-team__grade
+                Director Comercial
+              %a.about-team__mail{:href=>"mailto:juan.gutierrez@ekored.co"}
+                %i.fa.fa-envelope-o
+                german.vanegas@ekored.co
+              %p.main-general__description.main-general__description--dark
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+          .about-team__item
+            .about-team__avatar
+              %span.about-team__line
+              %img{:src=>"assets/img/nosotros/team3.png", :alt=>""}/
+            .about-team__body
+              %h3.general-card__title
+                German Darío Vanegas Sánchez
+              %p.about-team__grade
+                Director Comercial
+              %a.about-team__mail{:href=>"mailto:juan.gutierrez@ekored.co"}
+                %i.fa.fa-envelope-o
+                german.vanegas@ekored.co
+              %p.main-general__description.main-general__description--dark
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+
+    %section.about-site
+      .about-site__bg
+      .container.padding-top-bottom
+        %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+          Nuestras sedes
+        .d-flex.justify-content-center
+          %p.main-general__description
+            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+        .container-grid
+          .about-site__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .1s  ;"}
+            .about-site__img
+              %img{:src=>"assets/img/nosotros/medellin.png", :alt=>""}/
+            .about-site__body
+              %h3.general-card__title
+                Medellin
+              %p.main-general__description.main-general__description--dark
+                Carrera 51b #78-40
+              %p.main-general__description.main-general__description--dark
+                Barrio Miranda
+              %p.main-general__description.main-general__description--dark
+                Tel: +57 (4) 444 35 69
+          .about-site__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .2s  ;"}
+            .about-site__img
+              %img{:src=>"assets/img/nosotros/bogota.png", :alt=>""}/
+            .about-site__body
+              %h3.general-card__title
+                Bogotá
+              %p.main-general__description.main-general__description--dark
+                Carrera 50 # 5C – 64 
+              %p.main-general__description.main-general__description--dark
+                Tel: +57 (1) 805 8537
+          .about-site__item.wow.animated.fadeInRight{:style=>"visibility: visible; animation-delay: .3s  ;"}
+            .about-site__img
+              %img{:src=>"assets/img/nosotros/cali.png", :alt=>""}/
+            .about-site__body
+              %h3.general-card__title
+                Cali
+              %p.main-general__description.main-general__description--dark
+                Calle 11A N° 37-93
+              %p.main-general__description.main-general__description--dark
+                Acopi Yumbo
+              %p.main-general__description.main-general__description--dark
+                Tel: +57 (2) 382 75 20
+
+
+
+
+    %section.general-colum
+      .container.padding-top-bottom
+        .container-grid
+          .general-colum__img
+            %img{:src=>"assets/img/nosotros/image2@3x.png", :alt=>"img"}/
+          .general-colum__text
+            %h3.main-general__pretitle.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              ACERCA DE
+            %h2.main-general__title.main-general__title--small.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+              Sistema integrado de gestión
+            %p.main-general__description.main-general__description--dark
+              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+            %p.main-general__description.main-general__description--dark
+              No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+            %p.main-general__description.main-general__description--dark
+              No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.    
+          
+          
+    %footer.main-footer
+      .container.padding-top-bottom
+        .container-grid
+          .main-footer__item
+            .main-footer__logo
+              %img{:src=>"assets/img/logo_2@2x.png" }/
+            %p.main-footer__description
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+          .main-footer__item
+            %h2.main-footer__title
+              Menú 
+            %ul.site-map
+              %li
+                %a{:href=>"nosotros.html"}
+                  Quiénes Somos 
+              %li
+                %a{:href=>"servicios.html"}
+                  Servicios
+              %li
+                %a{:href=>"publicaciones.html"}
+                  Publicaciones 
+              %li
+                %a{:href=>"proveedores.html"}
+                  Proveedores
+              %li
+                %a{:href=>"contacto.html"}
+                  Contácto 
+          .main-footer__item
+            %h2.main-footer__title
+              Datos de Contacto
+            %ul.list-contact
+              %li
+                %a{:href=>""}
+                  %i.fa.fa-map-marker 
+                  Carrera 51b #78-40
+              %li
+                %a{:href=>"mailto:info@ekored.co"}
+                  %i.fa.fa-envelope-o
+                  Email: info@ekored.co
+              %li
+                %a{:href=>"tel:5744443569"}
+                  %i.fa.fa-phone 
+                  Phone: 57 (4) 444 35 69
+          .main-footer__item
+            %h2.main-footer__title
+              Nuestras Redes
+            .main-footer__rrss
+              %a.rrss__item{:href=>"https://www.facebook.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-facebook 
+              %a.rrss__item{:href=>"https://twitter.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-twitter 
+              %a.rrss__item{:href=>"https://www.youtube.com/channel/UCSRIAcCn4BsyyqK4WywatZg", :target=>"_blank"}
+                %i.fa.fa-youtube-play 
+              %a.rrss__item{:href=>"https://www.instagram.com/ekoredco/", :target=>"_blank"}
+                %i.fa.fa-instagram 
+
+      %a#js_up.boton-subir.slider-top{:href => "#"}
+        %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
+      .main-powered
+        .container 
+          .d-flex.justify-content-center.p-4
+            %p Copyright © 2019 
+            %a{:href=>"https://sigma.la/"} Sigma Studios 
+            %p - Sitios Web
+    .main-whatsapp
+      %a{:target=>"_blank", :href=>"https://wa.me/573176383948"}
+        %img{'data-src'=>"assets/img/whatsapp@3x.png", :alt=>"icon chat"}
+
+    %script{src: 'assets/js/jquery.min.js' }
+    %script{:crossorigin => "anonymous", :integrity => "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    %script{src: 'assets/js/slick.min.js' }
+    %script{src: 'assets/js/setting-slick.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js' }
+    %script{src: 'assets/js/main.js' }
+
