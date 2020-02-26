@@ -6,6 +6,13 @@
   background-color: #fff !important;
 }
 
+::selection {
+  /* color: gold; */
+  background: #007844;
+  color: #fff;
+}
+
+
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: #9E9E9E;
@@ -1052,7 +1059,7 @@ button:focus {
   }
 
   .nav-item button {
-    color: #007844 !important;
+    color: #4a4a4a !important;
   }
 }
 
@@ -2420,6 +2427,19 @@ button:focus {
   .single-collapse .container-grid {
     grid-template-columns: 100%;
   }
+
+  .about-team .slick-prev {
+    left: 0;
+  }
+
+  .about-team .slick-prev::before {
+    background-image: url(../img/path.png);
+  }
+
+  .about-team .slick-next {
+    right: 0;
+  }
+
 }
 
 .single-collapse .single-collapse__img {
@@ -3353,21 +3373,24 @@ button:focus {
 
 .post-detail__form input,
 .post-detail__form textarea {
-  border-radius: 2px;
-  border: solid 1px #dee2e6;
-  background-color: #ffffff;
-  padding: .6rem 1rem;
-  width: 48%;
-  margin-bottom: 1rem;
+  border-radius: 2px !important;
+  border: solid 1px #dee2e6 !important;
+  background-color: #ffffff !important;
+  padding: .6rem 1rem !important;
+}
+
+.post-detail__form input {
+  height: initial !important;
 }
 
 .post-detail__form input::placeholder,
 .post-detail__form textarea::placeholder {
   font-weight: 600;
+  color: #4a4a4a;
 }
 
 .post-detail__form textarea {
-  height: 6rem;
+  height: 6rem !important;
 }
 
 .post-detail__form form {
@@ -3379,4 +3402,27 @@ button:focus {
 .post-detail__form input[type=email],
 .post-detail__form textarea {
   width: 100%;
+}
+
+.post-detail__form .main-general__button {
+  border-radius: 3px !important;
+  box-shadow: 0 12px 31px 0 rgba(157, 204, 73, 0.43) !important;
+  background-color: #9dcc49 !important;
+  /* width: 169px; */
+  /* height: 51px; */
+  font-weight: bold !important;
+  transition: .5s !important;
+  /* height: 51px; */
+  padding: .8rem 2rem !important;
+  color: #fff !important;
+}
+
+.post-detail__form .frm_style_estilos-formidable.with_frm_style .form-field {
+  margin-bottom: 13px;
+}
+
+
+.post-detail__form input:focus,
+.post-detail__form textarea:focus {
+  box-shadow: 0 2px 9px 0 rgba(97, 198, 98, 0.48) !important;
 }

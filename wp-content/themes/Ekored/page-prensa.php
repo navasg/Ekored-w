@@ -59,15 +59,7 @@
               <p class="main-general__description main-general__description--dark mb-3">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi
               </p>
-              <form action="">
-                <input placeholder="Nombre" type="text">
-                <input placeholder="Asunto" type="text">
-                <input placeholder="Correo" type="email">
-                <textarea placeholder="Mensaje"></textarea>
-                <div class="d-flex justify-content-center container-form">
-                  <a class="main-general__button" href="">Enviar</a>
-                </div>
-              </form>
+              <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 4, 'title' => false, 'description' => false ) ); ?>
             </div>
           </div>
         </div>
