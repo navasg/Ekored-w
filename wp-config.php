@@ -26,7 +26,7 @@ define( 'DB_NAME', 'ekored' );
 define( 'DB_USER', 'admin' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '1234' );
+define( 'DB_PASSWORD', '123456' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -36,6 +36,9 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+
+define( 'FS_METHOD', 'direct' );
 
 /**#@+
  * Authentication Unique Keys and Salts.

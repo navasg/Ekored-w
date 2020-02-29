@@ -10,10 +10,15 @@
         </p>
       </div>
       <div class="main-gallery__carousel wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">
-        <div class="main-gallery__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image_3@3x.png">
+      <?php $args = array( 'post_type' => 'galeria' ); ?>
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <div class="main-gallery__item">
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>">
         </div>
-        <div class="main-gallery__item">
+        <?php endwhile; ?>
+        
+        <!-- <div class="main-gallery__item">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image_4@3x.png">
         </div>
         <div class="main-gallery__item">
@@ -24,7 +29,7 @@
         </div>
         <div class="main-gallery__item">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image_6@3x.png">
-        </div>
+        </div> -->
       </div>
     </div>
   </section>

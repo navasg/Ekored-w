@@ -32,8 +32,9 @@
       </div>
     </div>
   </section>
+  
   <?php  get_template_part('partials/video'); ?>
-<?php  get_template_part('partials/gallery'); ?>
+  <?php  get_template_part('partials/gallery'); ?>
   <section class="single-phrase">
     <div class="single-phrase__mask">
       <div class="container">

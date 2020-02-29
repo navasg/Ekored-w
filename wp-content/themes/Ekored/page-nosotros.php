@@ -10,20 +10,23 @@
   <section class="general-colum">
     <div class="container padding-top-bottom">
       <div class="container-grid">
-        <div class="general-colum__img">
-          <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/image@3x.png">
+      <?php $args = array( 'post_type' => 'about', 'posts_per_page' => 1 ); ?>
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <div class="general-colum__img">
+          <img alt="img" src="<?php echo get_the_post_thumbnail_url(); ?>">
         </div>
         <div class="general-colum__text">
           <h3 class="main-general__pretitle wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
             ACERCA DE
           </h3>
           <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-            Quienes somos
+          <?php the_title(); ?>
           </h2>
           <p class="main-general__description main-general__description--dark">
-            EKO RED surge en febrero del 2013 a partir de la alianza estratégica de dos modelos económicos: COOPERENKA y ENKA DE COLOMBIA.
+              <?php the_content(); ?>
           </p>
-          <p class="main-general__description main-general__description--dark">
+          <!-- <p class="main-general__description main-general__description--dark">
             ENKA DE COLOMBIA consciente de la necesidad de cerrar el ciclo de vida del PET y aprovechando su conocimiento y experiencia en la producción de resina y fibras sintéticas, desarrolló un ambicioso proyecto para recuperar las botellas de PET y transformarlas
             mediante proyectos de alta tecnología en resinas, fibras y filamentos, los cuales son empleados en múltiples usos textiles o plásticos con propiedades similares a aquellos provenientes de la cadena petroquímica.
           </p>
@@ -33,9 +36,10 @@
           </p>
           <p class="main-general__description main-general__description--dark">
             Continuado con este proyecto sustentable la alianza PETCICLO + EKO = EKORED como EMPRESA VERDE será reconocida por su triple estrategia de valor:
-          </p>
+          </p> -->
         </div>
       </div>
+      <?php endwhile; ?>
     </div>
   </section>
   <section class="about-icons">
@@ -66,47 +70,36 @@
       </div>
     </div>
   </section>
+
+
+  <!-- section de enfoque  -->
+
+
   <section class="about-history">
     <div class="container padding-top-bottom">
       <div class="container-grid">
+      <?php $args = array( 'post_type' => 'enfoque', 'posts_per_page' => 3 ); ?>
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="about-history__item wow animated fadeInRight" style="visibility: visible; animation-delay: .1s  ;">
           <div class="about-history__icon">
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/leaf-2@3x.png">
+            <img alt="" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
           <div class="main-general__title">
-            Misión
+             <?php the_title(); ?>
           </div>
           <div class="main-general__description">
-            EKO RED se dedica al abastecimiento, procesamiento y comercialización de material reciclado a través de la formación de la red de aprovechamiento; beneficiando el medio ambiente.
+          <?php the_content(); ?>
           </div>
         </div>
-        <div class="about-history__item wow animated fadeInRight" style="visibility: visible; animation-delay: .2s  ;">
-          <div class="about-history__icon">
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/green-energy@3x.png">
-          </div>
-          <div class="main-general__title">
-            Visión
-          </div>
-          <div class="main-general__description">
-            En el 2020 EKO RED será la empresa líder en abastecimiento, procesamiento y comercialización de PET reciclado en el mercado Colombiano; a través de una organización sólida e innovadora, con capacidad de interlocución en los ámbitos político, ambiental,
-            económico y social.
-          </div>
-        </div>
-        <div class="about-history__item wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">
-          <div class="about-history__icon">
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/globe@3x.png">
-          </div>
-          <div class="main-general__title">
-            Política de Calidad
-          </div>
-          <div class="main-general__description">
-            EKO RED es una empresa orientada a la satisfacción de las necesidades de los clientes de PET reciclado, velando por la integridad y mejoramiento de sus procesos, proveedores y la comunidad, con el apoyo de un personal competente y capacitado y una infraestructura
-            adecuada para la prestación del servicio.
-          </div>
-        </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>
+
+
+  <!-- section de nuestro equipo -->
+
   <section class="about-team">
     <div class="container padding-top-bottom">
       <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
@@ -118,93 +111,37 @@
         </p>
       </div>
       <div class="about-team__carousel wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">
-        <div class="about-team__item">
+      <?php $args = array( 'post_type' => 'equipo' ); ?>
+             <?php $loop = new WP_Query( $args ); ?>
+             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>  
+      <div class="about-team__item">
           <div class="about-team__avatar">
             <span class="about-team__line"></span>
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/team1.png">
+            <img alt="" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
           <div class="about-team__body">
             <h3 class="general-card__title">
-              Juan Carlos Gutiérrez Cano
+            <?php the_title(); ?>
             </h3>
             <p class="about-team__grade">
-              Gerente
+            <?php the_field('cargo'); ?>
             </p>
-            <a class="about-team__mail" href="mailto:juan.gutierrez@ekored.co">
+            <a class="about-team__mail" href="mailto:<?php the_field('correo_electronico'); ?>">
 <i class="fa fa-envelope-o"></i>
-juan.gutierrez@ekored.co
+<?php the_field('correo_electronico'); ?>
 </a>
             <p class="main-general__description main-general__description--dark">
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+            <?php the_content(); ?>
             </p>
           </div>
         </div>
-        <div class="about-team__item">
-          <div class="about-team__avatar">
-            <span class="about-team__line"></span>
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/team2.png">
-          </div>
-          <div class="about-team__body">
-            <h3 class="general-card__title">
-              Alejandra Jurado Morales
-            </h3>
-            <p class="about-team__grade">
-              Comunicadora
-            </p>
-            <a class="about-team__mail" href="mailto:juan.gutierrez@ekored.co">
-<i class="fa fa-envelope-o"></i>
-alejandra.jurado@ekored.co
-</a>
-            <p class="main-general__description main-general__description--dark">
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-            </p>
-          </div>
-        </div>
-        <div class="about-team__item">
-          <div class="about-team__avatar">
-            <span class="about-team__line"></span>
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/team3.png">
-          </div>
-          <div class="about-team__body">
-            <h3 class="general-card__title">
-              German Darío Vanegas Sánchez
-            </h3>
-            <p class="about-team__grade">
-              Director Comercial
-            </p>
-            <a class="about-team__mail" href="mailto:juan.gutierrez@ekored.co">
-<i class="fa fa-envelope-o"></i>
-german.vanegas@ekored.co
-</a>
-            <p class="main-general__description main-general__description--dark">
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-            </p>
-          </div>
-        </div>
-        <div class="about-team__item">
-          <div class="about-team__avatar">
-            <span class="about-team__line"></span>
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/team3.png">
-          </div>
-          <div class="about-team__body">
-            <h3 class="general-card__title">
-              German Darío Vanegas Sánchez
-            </h3>
-            <p class="about-team__grade">
-              Director Comercial
-            </p>
-            <a class="about-team__mail" href="mailto:juan.gutierrez@ekored.co">
-<i class="fa fa-envelope-o"></i>
-german.vanegas@ekored.co
-</a>
-            <p class="main-general__description main-general__description--dark">
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-            </p>
-          </div>
-        </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>
+ 
+  <!-- sedes de ekored   -->
+
   <section class="about-site">
     <div class="about-site__bg"></div>
     <div class="container padding-top-bottom">
@@ -217,68 +154,36 @@ german.vanegas@ekored.co
         </p>
       </div>
       <div class="container-grid">
+      <?php $args = array( 'post_type' => 'sedes' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+   
         <div class="about-site__item wow animated fadeInRight" style="visibility: visible; animation-delay: .1s  ;">
           <div class="about-site__img">
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/medellin.png">
+            <img alt="" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
           <div class="about-site__body">
             <h3 class="general-card__title">
-              Medellin
+             <?php the_title(); ?>
             </h3>
             <p class="main-general__description main-general__description--dark">
-              Carrera 51b #78-40
+            <?php the_content(); ?>
             </p>
-            <p class="main-general__description main-general__description--dark">
-              Barrio Miranda
-            </p>
-            <p class="main-general__description main-general__description--dark">
-              Tel: +57 (4) 444 35 69
-            </p>
+           
           </div>
         </div>
-        <div class="about-site__item wow animated fadeInRight" style="visibility: visible; animation-delay: .2s  ;">
-          <div class="about-site__img">
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/bogota.png">
-          </div>
-          <div class="about-site__body">
-            <h3 class="general-card__title">
-              Bogotá
-            </h3>
-            <p class="main-general__description main-general__description--dark">
-              Carrera 50 # 5C – 64
-            </p>
-            <p class="main-general__description main-general__description--dark">
-              Tel: +57 (1) 805 8537
-            </p>
-          </div>
-        </div>
-        <div class="about-site__item wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">
-          <div class="about-site__img">
-            <img alt="" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/cali.png">
-          </div>
-          <div class="about-site__body">
-            <h3 class="general-card__title">
-              Cali
-            </h3>
-            <p class="main-general__description main-general__description--dark">
-              Calle 11A N° 37-93
-            </p>
-            <p class="main-general__description main-general__description--dark">
-              Acopi Yumbo
-            </p>
-            <p class="main-general__description main-general__description--dark">
-              Tel: +57 (2) 382 75 20
-            </p>
-          </div>
-        </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>
   <section class="general-colum">
     <div class="container padding-top-bottom">
+    <?php $args = array( 'post_type' => 'about' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
       <div class="container-grid">
         <div class="general-colum__img">
-          <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nosotros/image2@3x.png">
+          <img alt="img" src="<?php the_field('imagen'); ?>">
         </div>
         <div class="general-colum__text">
           <h3 class="main-general__pretitle wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
@@ -288,19 +193,11 @@ german.vanegas@ekored.co
             Sistema integrado de gestión
           </h2>
           <p class="main-general__description main-general__description--dark">
-            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó
-            una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-          </p>
-          <p class="main-general__description main-general__description--dark">
-            No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem
-            Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-          </p>
-          <p class="main-general__description main-general__description--dark">
-            No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem
-            Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+          <?php the_field('contenido'); ?>
           </p>
         </div>
       </div>
+      <?php endwhile; ?>
     </div>
   </section>
   <?php get_footer(); ?>

@@ -87,6 +87,7 @@ Phone: 57 (4) 444 35 69
         </div>
       </div>
     </div>
+    <?php wp_footer(); ?>
   </footer>
   <a class="boton-subir slider-top" href="#" id="js_up">
 <img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/button@3x.png">

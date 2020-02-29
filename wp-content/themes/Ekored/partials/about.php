@@ -11,26 +11,32 @@
         Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
       </p>
       <div class="container-grid">
+      <?php $args = array( 'post_type' => 'servicios', 'posts_per_page' => 4 ); ?>
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="main-about__item">
-          <a href="<?php bloginfo('url')?>/interna">
-<img alt="icon chat" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_10@2x.png">
-Proyectos
+          <a href="<?php the_permalink(); ?>">
+<img alt="icon chat" src="<?php the_field('icono'); ?>">
+ <?php the_title(); ?>
 </a>
+
+
         </div>
+<?php endwhile;  ?>
         <div class="main-about__item">
           <a href="<?php bloginfo('url')?>/interna">
-<img alt="icon chat" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_8@2x.png">
+<img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_8@2x.png">
 Economía Circular
 </a>
         </div>
         <div class="main-about__item">
           <a href="<?php bloginfo('url')?>/interna">
-<img alt="icon chat" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_9@2x.png">
+<img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_9@2x.png">
 ODS
 </a>
         </div>
         <div class="main-about__item">
-          <img alt="icon chat" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/sprout@2x.png">
+          <img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/sprout@2x.png">
           <a href="<?php bloginfo('url')?>/interna">
 Cambio Climático
 </a>

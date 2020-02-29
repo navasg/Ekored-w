@@ -10,18 +10,24 @@
         </p>
       </div>
       <div class="container-grid wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">
-        <div class="main-services__item">
+      <?php $args = array( 'post_type' => 'service2', 'posts_per_page' => 3 ); ?>
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <div class="main-services__item">
           <div class="d-flex justify-content-center">
-            <img alt="Icono de Servicio" class="main-services__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_11@3x.png">
+            <img alt="Icono de Servicio" class="main-services__icon" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
           <h2 class="main-general__title--small main-general__title">
-            Comprar
+            <?php the_title(); ?>
           </h2>
-          <p class="main-general__description main-general__description--dark">
-            Logística, captación, compra y transporte de material PET a nivel país, mediante una red de reciclaje enfocada en el aprovechamiento de residuos.
-          </p>
+          <div class="main-general__description main-general__description--dark">
+              <?php the_content(); ?>
+</div>
+         
         </div>
-        <div class="main-services__item">
+        <?php endwhile; ?>
+<!-- 
+         <div class="main-services__item">
           <div class="d-flex justify-content-center">
             <img alt="Icono de Servicio" class="main-services__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_12@3x.png">
           </div>
@@ -42,7 +48,7 @@
           <p class="main-general__description main-general__description--dark">
             Este proceso consiste en el prensaje que se le hace a las botellas ya clasificadas, con el fin de reducir el espacio en el transporte y poder desplazar más material en menos viajes.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
