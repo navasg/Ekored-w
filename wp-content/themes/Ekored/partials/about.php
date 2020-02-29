@@ -23,7 +23,7 @@
 
         </div>
 <?php endwhile;  ?>
-        <div class="main-about__item">
+        <!-- <div class="main-about__item">
           <a href="<?php bloginfo('url')?>/interna">
 <img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_8@2x.png">
 Economía Circular
@@ -40,7 +40,7 @@ ODS
           <a href="<?php bloginfo('url')?>/interna">
 Cambio Climático
 </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
