@@ -75,8 +75,13 @@ Publicaciones
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-p" data="offcanvas" href="<?php bloginfo('url')?>/prensa" role="button">
+            <?php $args = array( 'post_type' => 'post', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+              <a class="nav-link nav-link-p" data="offcanvas" href="<?php the_permalink(); ?>" role="button">
 Prensa
+<?php endwhile; ?>
 </a>
             </li>
             <li class="nav-item">
@@ -90,7 +95,8 @@ Prensa
       </div>
     </nav>
 	</header>
-	
+  
+  
 	<?php else: ?> 
 	<header class="fixed-top navbar-fixed-js navbar-fixed-js--custom">
     <nav class="navbar navbar-expand-lg">
@@ -143,9 +149,14 @@ Prensa
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-p fixed--link" data="offcanvas" href="<?php bloginfo('url')?>/prensa" role="button">
-                Prensa
-              </a>
+            <?php $args = array( 'post_type' => 'post', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+              <a class="nav-link nav-link-p" data="offcanvas" href="<?php the_permalink(); ?>" role="button">
+Prensa
+<?php endwhile; ?>
+</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-p fixed--link" data="offcanvas" href="<?php bloginfo('url')?>/proveedores">Proveedores</a>

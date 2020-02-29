@@ -37,30 +37,37 @@
   <section class="single-phrase">
     <div class="single-phrase__mask">
       <div class="container">
+      <?php $args = array( 'post_type' => 'prove', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <h2 class="single-phrase__title">
-          1,9 millones de botellas diarias
+        <?php the_field('titulo_records'); ?> 
         </h2>
         <p class="single-phrase__subtitle">
-          Un aliado estratégico en procesos sociales y ambientales
+        <?php the_field('descripcion_records'); ?> 
         </p>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>
   <section class="single-collapse">
     <div class="container padding-top-bottom">
       <div class="container-grid">
+      <?php $args = array( 'post_type' => 'prove', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="single-collapse__img">
-          <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/single/collapse.png">
+          <img alt="img" src="<?php the_field('imagen_prove'); ?> ">
         </div>
         <div class="single-collapse__text">
           <h3 class="main-general__pretitle wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
             ACERCA DE
           </h3>
           <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-            Nuestros Servicios
+          <?php the_field('titulo_prove'); ?> 
           </h2>
           <p class="main-general__description main-general__description--dark">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+          <?php the_field('contenido_prove'); ?>   
           </p>
           <div class="single-collapse__content">
             <div class="accordion-option">
@@ -71,13 +78,13 @@
                 <div class="panel-heading" id="headingOne" role="tab">
                   <h4 class="panel-title">
                     <a aria-controls="collapseOne" aria-expanded="false" data-parent="#accordion" data-toggle="collapse" href="#collapseOne" role="button">
-Lorem ipsum dolor sit amet consectetur adipiscing
+                    <?php the_field('titulo_item_1'); ?> 
 </a>
                   </h4>
                 </div>
                 <div aria-labelledby="headingOne" class="panel-collapse collapse in" id="collapseOne" role="tabpanel">
                   <div class="panel-body">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+                  <?php the_field('contenido_item_1'); ?> 
                   </div>
                 </div>
               </div>
@@ -85,20 +92,21 @@ Lorem ipsum dolor sit amet consectetur adipiscing
                 <div class="panel-heading" id="headingTwo" role="tab">
                   <h4 class="panel-title">
                     <a aria-controls="collapseTwo" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" role="button">
-Lorem ipsum dolor sit amet consectetur adipiscing
+                    <?php the_field('titulo_item_2'); ?> 
 </a>
                   </h4>
                 </div>
                 <div aria-labelledby="headingTwo" class="panel-collapse collapse in" id="collapseTwo" role="tabpanel">
                   <div class="panel-body">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
-                  </div>
+                  <?php the_field('contenido_item_2'); ?> 
+                                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <?php endwhile; ?>
+      </div>   
     </div>
   </section>
   <?php get_footer(); ?>

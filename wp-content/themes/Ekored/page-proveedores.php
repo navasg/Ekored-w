@@ -9,115 +9,128 @@
   <section class="suppliers-quality">
     <div class="container padding-top-bottom">
       <div class="container-grid">
+      <?php $args = array( 'post_type' => 'prove', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="suppliers-quality__text">
           <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-            Calidad Material
+            <?php the_title(); ?>
           </h2>
           <p class="main-general__description main-general__description--dark">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+          <?php the_content(); ?>  
           </p>
+        
           <div class="suppliers-quality__grid">
             <div class="suppliers-quality__item">
               <div class="suppliers-quality__icon">
-                <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/icon1.png">
+                <img alt="img" src="<?php the_field('icono_1');?>">
               </div>
               <h2 class="suppliers-quality__title">
-                Requisitos de calidad
+               <?php the_field('titulo_1'); ?>
               </h2>
               <p class="main-general__description main-general__description--dark">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              <?php the_field('contenido_1'); ?> 
               </p>
             </div>
             <div class="suppliers-quality__item">
               <div class="suppliers-quality__icon">
-                <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/icon2.png">
+                <img alt="img" src="<?php the_field('icono_0');?>">
               </div>
               <h2 class="suppliers-quality__title">
-                Marcación de pacas
+              <?php the_field('titulo_0'); ?>  
               </h2>
               <p class="main-general__description main-general__description--dark">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              <?php the_field('contenido_0'); ?> 
               </p>
             </div>
             <div class="suppliers-quality__item">
               <div class="suppliers-quality__icon">
-                <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/icon3.png">
+                <img alt="img" src="<?php the_field('icono_3');?>">
               </div>
               <h2 class="suppliers-quality__title">
-                Amarre de pacas
+              <?php the_field('titulo_3'); ?> 
               </h2>
               <p class="main-general__description main-general__description--dark">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              <?php the_field('contenido_3'); ?> 
               </p>
             </div>
             <div class="suppliers-quality__item">
               <div class="suppliers-quality__icon">
-                <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/icon4.png">
+                <img alt="img" src="<?php the_field('icono_4');?>">
               </div>
               <h2 class="suppliers-quality__title">
-                Etiquetas
+              <?php the_field('titulo_4'); ?>  
               </h2>
               <p class="main-general__description main-general__description--dark">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              <?php the_field('contenido_4'); ?>  
               </p>
             </div>
             <div class="suppliers-quality__item">
               <div class="suppliers-quality__icon">
-                <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/icon5.png">
+                <img alt="img" src="<?php the_field('icono_5');?>">
               </div>
               <h2 class="suppliers-quality__title">
-                Requisitos para ingresar a Enka - EKO-RED
+              <?php the_field('titulo_5'); ?>  
               </h2>
               <p class="main-general__description main-general__description--dark">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              <?php the_field('contenido_5'); ?>  
               </p>
             </div>
             <div class="suppliers-quality__item">
               <div class="suppliers-quality__icon">
-                <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/icon6.png">
+                <img alt="img" src="<?php the_field('icono_6');?>">
               </div>
               <h2 class="suppliers-quality__title">
-                Imagenes
+              <?php the_field('titulo_6'); ?> 
               </h2>
               <p class="main-general__description main-general__description--dark">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi.
+              <?php the_field('contenido_6'); ?> 
               </p>
             </div>
           </div>
         </div>
         <div class="suppliers-quality__img">
-          <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/proveedores/proveedores.png">
-        </div>
+          <img alt="img" src="<?php echo get_the_post_thumbnail_url(); ?>">
+          </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>
+  
   <section class="single-phrase">
     <div class="single-phrase__mask">
       <div class="container">
+      <?php $args = array( 'post_type' => 'prove', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <h2 class="single-phrase__title">
-          1,9 millones de botellas diarias
+        <?php the_field('titulo_records'); ?> 
         </h2>
         <p class="single-phrase__subtitle">
-          Un aliado estratégico en procesos sociales y ambientales
+        <?php the_field('descripcion_records'); ?> 
         </p>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>
   <section class="single-collapse">
     <div class="container padding-top-bottom">
       <div class="container-grid">
+      <?php $args = array( 'post_type' => 'prove', 'posts_per_page' => 1 ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="single-collapse__img">
-          <img alt="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/single/collapse.png">
+          <img alt="img" src="<?php the_field('imagen_prove'); ?> ">
         </div>
         <div class="single-collapse__text">
           <h3 class="main-general__pretitle wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
             ACERCA DE
           </h3>
           <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-            Lorem Ipsum
+          <?php the_field('titulo_prove'); ?> 
           </h2>
           <p class="main-general__description main-general__description--dark">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+          <?php the_field('contenido_prove'); ?>   
           </p>
           <div class="single-collapse__content">
             <div class="accordion-option">
@@ -128,13 +141,13 @@
                 <div class="panel-heading" id="headingOne" role="tab">
                   <h4 class="panel-title">
                     <a aria-controls="collapseOne" aria-expanded="false" data-parent="#accordion" data-toggle="collapse" href="#collapseOne" role="button">
-Lorem ipsum dolor sit amet consectetur adipiscing
+                    <?php the_field('titulo_item_1'); ?> 
 </a>
                   </h4>
                 </div>
                 <div aria-labelledby="headingOne" class="panel-collapse collapse in" id="collapseOne" role="tabpanel">
                   <div class="panel-body">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+                  <?php the_field('contenido_item_1'); ?> 
                   </div>
                 </div>
               </div>
@@ -142,20 +155,21 @@ Lorem ipsum dolor sit amet consectetur adipiscing
                 <div class="panel-heading" id="headingTwo" role="tab">
                   <h4 class="panel-title">
                     <a aria-controls="collapseTwo" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" role="button">
-Lorem ipsum dolor sit amet consectetur adipiscing
+                    <?php the_field('titulo_item_2'); ?> 
 </a>
                   </h4>
                 </div>
                 <div aria-labelledby="headingTwo" class="panel-collapse collapse in" id="collapseTwo" role="tabpanel">
                   <div class="panel-body">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
-                  </div>
+                  <?php the_field('contenido_item_2'); ?> 
+                                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <?php endwhile; ?>
+      </div>   
     </div>
   </section>
   <?php get_footer(); ?>
