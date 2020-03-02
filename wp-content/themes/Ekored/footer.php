@@ -6,7 +6,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_2@2x.png">
           </div>
           <p class="main-footer__description">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+          Somos una compañía enfocada en el diseño y operación de un modelo sostenible que nos permite que el reciclaje de productos posindustriales se puedan incorporar a la cadena de abastecimiento mediante un modelo de economía circular que incluye recicladores, bodegas e industria; permitiendo reducir el impacto ambiental y generar una transformación social y ambiental.
           </p>
         </div>
         <div class="main-footer__item">

@@ -12,7 +12,7 @@
             Contactarnos
           </h2>
           <p class="main-general__description main-general__description--dark">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi
+          Gracias por su visita, nos gustaría saber de Usted, de sus dudas o comentarios acerca de nosotros. Mediante el siguiente formulario puede enviarnos un mensaje al cual le daremos respuesta lo más rápido que podamos
           </p>
           <!-- <form action="">
             <input placeholder="Nombre" type="text">

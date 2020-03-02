@@ -146,7 +146,7 @@
     <div class="about-site__bg"></div>
     <div class="container padding-top-bottom">
       <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-        Nuestras sedes
+        Nuestros Acopios
       </h2>
       <div class="d-flex justify-content-center">
         <p class="main-general__description">
@@ -166,9 +166,9 @@
             <h3 class="general-card__title">
              <?php the_title(); ?>
             </h3>
-            <p class="main-general__description main-general__description--dark">
+            <div class="main-general__description main-general__description--dark">
             <?php the_content(); ?>
-            </p>
+            </div>
            
           </div>
         </div>

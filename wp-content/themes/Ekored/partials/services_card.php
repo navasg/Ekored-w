@@ -2,11 +2,12 @@
     <div class="main-services__bg"></div>
     <div class="container padding-top-bottom">
       <h2 class="main-general__title wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-        Lorem ipsum dolor
+      Reducción del Impacto Ambiental 
       </h2>
       <div class="d-flex justify-content-center">
         <p class="main-general__description main-general__description--bold">
-          Nos enfocamos en que productos y servicios cuenten con altos índices de calidad que reduzcan el impacto ambiental.
+        Nos enfocamos en que productos y servicios cuenten con altos índices de calidad que reduzcan el impacto ambiental.
+
         </p>
       </div>
       <div class="container-grid wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">

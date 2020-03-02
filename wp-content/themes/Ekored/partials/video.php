@@ -5,7 +5,7 @@
       </h2>
       <div class="d-flex justify-content-center">
         <p class="main-general__description">
-          Nos enfocamos en que productos y servicios cuenten con altos índices de calidad que reduzcan el impacto ambiental.
+        Conoce más sobre nuestra organización 
         </p>
       </div>
       <div class="container-grid">

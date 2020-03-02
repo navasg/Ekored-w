@@ -2,11 +2,11 @@
     <div class="main-gallery__bg"></div>
     <div class="container padding-top-bottom">
       <h2 class="main-general__title main-general__title--small wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
-        Galería
+      ¡Nosotros PETciclamos!
       </h2>
       <div class="d-flex justify-content-center">
         <p class="main-general__description">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+        Comprometidos con el fortalecimiento continuo a favor de la población recicladora.
         </p>
       </div>
       <div class="main-gallery__carousel wow animated fadeInRight" style="visibility: visible; animation-delay: .3s  ;">

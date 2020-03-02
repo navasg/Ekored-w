@@ -8,8 +8,12 @@
         Nuestros Servicios
       </h2>
       <p class="main-general__description main-general__description--dark">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per eros massa feugiat imperdiet elementum urna nulla erat.
+      Somos una compañía enfocada en el diseño y operación de un modelo sostenible que nos permite que el reciclaje de productos posindustriales se puedan incorporar a la cadena de abastecimiento mediante un modelo de economía circular que incluye recicladores, bodegas e industria; permitiendo reducir el impacto ambiental y generar una transformación social y ambiental.
+      <br>  
+      Siendo una filial de Enka de Colombia, contamos con el reconocimiento nacional por el aporte al progreso sostenible, a través de la captación, separación, compactación y comercialización de material reciclado, aportando en la disminución de la explotación de los recursos naturales y la generación de empleo.
       </p>
+      
+
       <div class="container-grid">
       <?php $args = array( 'post_type' => 'servicios', 'posts_per_page' => 4 ); ?>
           <?php $loop = new WP_Query( $args ); ?>
@@ -23,24 +27,7 @@
 
         </div>
 <?php endwhile;  ?>
-        <!-- <div class="main-about__item">
-          <a href="<?php bloginfo('url')?>/interna">
-<img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_8@2x.png">
-Economía Circular
-</a>
-        </div>
-        <div class="main-about__item">
-          <a href="<?php bloginfo('url')?>/interna">
-<img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_9@2x.png">
-ODS
-</a>
-        </div>
-        <div class="main-about__item">
-          <img alt="icon chat" src="<?php echo get_template_directory_uri(); ?>/assets/img/sprout@2x.png">
-          <a href="<?php bloginfo('url')?>/interna">
-Cambio Climático
-</a>
-        </div> -->
+       
       </div>
     </div>
   </section>
